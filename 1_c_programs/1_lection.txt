@@ -1,0 +1,125 @@
+-----
+done
+----
+
+To convert source code (written in C or other programming language), we need Compliler
+Compiler is the program that converts source code into zeros and ones.
+    to convert our C code into Machine (binary) code we use "make" command,
+    which is not a Compiler it self
+    it is a sort of utility
+
+header - file which is similar to menu,
+    telling our program what function are available
+
+
+Data Types:
+- bool
+- char (%c)
+- float (%f)
+- double - more decimal numbers floats
+- int (%i)
+- long - bigger integer (%li)
+- string (%s format)
+
+in calculator, when we were trying to summarize 2 bln and 2 bln, which would be 4 bln
+    we got the wrong answer, since int variables can not hold such big value
+    so we used long variable instead
+in calculator, when we used floats to divide one value to another,
+    we found that if we use significant number of digist after decimal point (50)
+    we can see that strange values appear after some number:
+    it is called Floating point inPrecision
+        it refers to inability of computer fundamentally represent all possible real numbers
+        100% precisely at least by default
+and if we divide 4 by 3 using int as inputs - .333 part of the result would be truncated
+    and as the result we will have 1
+
+the problem of truncation arised in 1 Jan 2000, since in that time only 2 digits were used to reprtesent years
+    the solution was to increase capacity take more bits to store longer date format
+
+the similar problem may arise in 19 Feb 2038, since it is more than 2 bln away from 1970
+    in terms of 32 bits computer would not be able to count more seconds
+    the solution is the same to take more bits 64 and it dramatically increases the amount seconds computer can count
+
+
+
+Operators:
++, -, *, /,
+% - remainder of division
+
+Variables: Syntactic sugar
+#assign variable counter to 0
+    int counter = 0;
+# add 1 to counter:
+    counter = counter + 1;
+    counter += 1;
+    counter++;
+# update the value of variable that has already been created:
+    counter = 5
+    # we do not nee to remind the data type
+
+Data types
+
+While loop C
+
+For loop:
+    there are suttle differences with issues of scope:
+    variable, created in for loop exists only inside of that loop
+
+
+Create functions in C:
+    return datatype name of a function(parameters)
+    if there are no parameters inside of a function - "void"
+
+
+do while loop, for example we can ask for input
+    till the time the input sutisfies some condition, stated in while section
+
+----------------
+Types
+----------------
+how large data types in C:
+- bool 1 byte
+- char 1 byte
+- double 8 bytes
+- float 4 bytes
+- int 4 bytes
+- long 8 bytes
+- string ? bytes
+
+RAM - Random Access Memory, which can store some amount of data
+
+If we want to have multiple values stored in memory, there are better way to do this
+    rather than creating variable for each of them
+- Array - another type of data that allows to store the same types of data contiguously
+    int scores[3];
+    it does not help to save space, but helps to provide different locations for all values using one variable
+
+    string is an array of chars
+    to defferentiate one string from another, we need special character "nul" \0 (8 zero bits)
+    so every string is one byte longer due to existance of that symbol
+
+
+-----------------------------
+Command Line Arguments
+-----------------------------
+How we can run programs that take arguments from a command line?
+
+int main(void) - void actually mean that such program does not take Command Line Argument
+
+Exit status:
+    main function in C has an ability to signal to user whether something was succeful or not
+    by it's return value
+    if we return non-zero value from main,
+    it would mean that something goes wrong
+
+
+-----------------------------
+Cryptography
+-----------------------------
+if we want to hide a the contents of a message from someone who wants to intercept it
+like in school we encrypted writen message by changing some letters etc
+and the recepient should be able to decrypte it
+
+Plain text - Encrypting Algorithm (Cipher) - Ciphertext
+    Cipher typically takes 2 inputs
+

@@ -1,0 +1,27 @@
+-----------------------
+Algorithms
+-----------------------
+For computer it's memory is similar to closed lockers
+
+- Searching - is one of the most omnipresent topics and features of any system this days
+    for example:
+    is there something we are looking for?
+
+Algorithms: what is important
+1) Correctness - we want to have a right answers
+2) Efficiency - running times
+    Big O notation
+    What is dependancy between size of a problem and time required to solve it?
+    n, n/2, log2(n)
+    O(n), O(n/2) == O(n/2), O(log2n)
+    in order of log, which is way different
+    so when we talk about time = n and time = n/2, when n becomes very very large,
+    there are almost no difference between these 2, since they all are in Order of N
+
+Running time is evaluated in a Big O notation:
+commonly seen running times 
+- O(n^2)
+- O(n log n)
+- O(n)
+- O(log n)
+- O(1)
